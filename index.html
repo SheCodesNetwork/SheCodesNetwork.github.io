@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mi Página de Inicio</title>
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,7 +17,7 @@
     header {
       display: flex;
       align-items: center;
-      padding: 20px 20px;
+      padding: 20px;
       background-color: #fff;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
@@ -79,6 +81,46 @@
       color: #333;
     }
 
+    .social-info p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    .social-info i {
+      margin-right: 10px;
+      color: #a93dea;
+    }
+
+    /* Currículum del creador */
+    .creator-section {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+      border-top: 2px solid #eee;
+    }
+
+    .creator-section img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #a93dea;
+    }
+
+    .creator-section h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .creator-section p {
+      font-size: 1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -97,17 +139,18 @@
   <header>
     <img src="shecodes.png" alt="Logotipo">
   </header>
+
   <main class="container">
     <div class="text-section">
       <h1>She Codes Networks</h1>
-      <p>En She Codes Network te ayudaremos en tareas de redes u otras materias similares. Te proporcionaremos información e ideas sobre proyectos.</p>
+      <p>En está página te mostraremos toda la información y medios de comunicación sobre la marca</p>
       <p>Para ver toda esta información presiona el botón de "Más"</p>
       <button class="button" onclick="mostrarInfo()">Más...</button>
       <div class="social-info" id="infoRedes">
-        <p><strong>Instagram:</strong> @shecodes_networks</p>
-        <p><strong>Facebook:</strong> facebook.com/shecodesnetworks</p>
-        <p><strong>Twitter:</strong> @shecodes_net</p>
-        <p><strong>Email:</strong> contacto@shecodes.com</p>
+        <p><i class="fab fa-instagram"></i><strong>Instagram:</strong> @shecodes_networks</p>
+        <p><i class="fab fa-facebook"></i><strong>Facebook:</strong> facebook.com/shecodesnetworks</p>
+        <p><i class="fab fa-twitter"></i><strong>Twitter:</strong> @shecodes_net</p>
+        <p><i class="fas fa-envelope"></i><strong>Email:</strong> contacto@shecodes.com</p>
       </div>
     </div>
     <div class="image-section">
@@ -115,14 +158,19 @@
     </div>
   </main>
 
+  <!-- Sección del creador -->
+  <section class="creator-section">
+    <img src="perfil.png" alt="Foto del creador">
+    <h2>Sobre el Creador</h2>
+    <p>Hola, soy <strong>Alondra Milagros Rubio Padrón</strong>, una estudiante de la Universidad Politénica de Juventino Rosas en la carrera de ingeniría de Redes y Telecomunicaciones.
+      Tengo experiencia en HTML, programación, señales, redes y electronica. Esta página es parte de mi proyecto para ayudar a más personas con intereses similares.</p>
+    <p>¡Gracias por visitar!</p>
+  </section>
+
   <script>
     function mostrarInfo() {
       const info = document.getElementById('infoRedes');
-      if (info.style.display === 'none' || info.style.display === '') {
-        info.style.display = 'block';
-      } else {
-        info.style.display = 'none';
-      }
+      info.style.display = (info.style.display === 'block') ? 'none' : 'block';
     }
   </script>
 </body>
