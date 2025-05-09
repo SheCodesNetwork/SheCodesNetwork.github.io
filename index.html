@@ -92,34 +92,45 @@
     }
 
     /* Currículum del creador */
-    .creator-section {
-      padding: 40px 20px;
-      background-color: #f9f9f9;
-      text-align: center;
-      border-top: 2px solid #eee;
-    }
+    /* Currículum del creador */
+.creator-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fefefe, #f3e9ff);
+  text-align: center;
+  border-top: 3px solid #a93dea;
+  box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 1s ease-in-out;
+}
 
-    .creator-section img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      border: 3px solid #a93dea;
-    }
+.creator-section img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid #a93dea;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
 
-    .creator-section h2 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 0.5rem;
-    }
+.creator-section h2 {
+  font-size: 2.5rem;
+  color: #a93dea;
+  margin-bottom: 0.8rem;
+}
 
-    .creator-section p {
-      font-size: 1rem;
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto 1rem;
-    }
+.creator-section p {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 1.2rem;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
     @media (max-width: 768px) {
       .container {
@@ -144,8 +155,8 @@
     <div class="text-section">
       <h1>She Codes Networks</h1>
       <p>En está página te mostraremos toda la información y medios de comunicación sobre la marca</p>
-      <p>Para ver toda esta información presiona el botón de "Más"</p>
-      <button class="button" onclick="mostrarInfo()">Más...</button>
+      <p>Para ver toda esta información presiona el botón de "Contactános" para ver los deferentes medios de comunicación</p>
+      <button class="button" onclick="mostrarInfo()">Contáctanos</button>
       <div class="social-info" id="infoRedes">
         <p><i class="fab fa-instagram"></i><strong>Instagram:</strong> @shecodes_networks</p>
         <p><i class="fab fa-facebook"></i><strong>Facebook:</strong> facebook.com/shecodesnetworks</p>
@@ -162,8 +173,8 @@
   <section class="creator-section">
     <img src="perfil.jfif" alt="Foto del creador">
     <h2>Sobre el Creador</h2>
-    <p>Hola, soy <strong>Alondra Milagros Rubio Padrón</strong>, una estudiante de la Universidad Politénica de Juventino Rosas en la carrera de ingeniría de Redes y Telecomunicaciones.
-      Tengo experiencia en HTML, programación, señales, redes y electronica. Esta página es parte de mi proyecto para ayudar a más personas con intereses similares.</p>
+    <p>Hola, soy <strong>Alondra Milagros Rubio Padrón</strong>, una estudiante de la carrera de ingeniría de Redes y Telecomunicaciones en la Universidad Politénica de Juventino Rosas.
+      Tengo experiencia en HTML, programación, señales, redes y electronica. Esta página es parte de mi tarea en la materia de Sistemas telematicos, para ayudar a más personas con intereses similares.</p>
     <p>¡Gracias por visitar!</p>
   </section>
 
