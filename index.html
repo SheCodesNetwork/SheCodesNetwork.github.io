@@ -46,7 +46,7 @@
     .text-section p {
       font-size: 1.1rem;
       color: #666;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     .button {
@@ -67,6 +67,16 @@
     .image-section img {
       max-width: 90%;
       height: auto;
+    }
+
+    .social-info {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background-color: #f3f3f3;
+      border-left: 5px solid #a93dea;
+      border-radius: 10px;
+      color: #333;
     }
 
     @media (max-width: 768px) {
@@ -90,13 +100,30 @@
   <main class="container">
     <div class="text-section">
       <h1>She Codes Networks</h1>
-      <p>En está pagina te mostraremos toda la información y medios de comunicación sobre la marca</p>
-      <p>Para ver toda esta información preciona el botón de "Más"</p>
-      <button class="button">Más...</button>
+      <p>En está página te mostraremos toda la información y medios de comunicación sobre la marca</p>
+      <p>Para ver toda esta información presiona el botón de "Más"</p>
+      <button class="button" onclick="mostrarInfo()">Más...</button>
+      <div class="social-info" id="infoRedes">
+        <p><strong>Instagram:</strong> @shecodes_networks</p>
+        <p><strong>Facebook:</strong> facebook.com/shecodesnetworks</p>
+        <p><strong>Twitter:</strong> @shecodes_net</p>
+        <p><strong>Email:</strong> contacto@shecodes.com</p>
+      </div>
     </div>
     <div class="image-section">
       <img src="imagen2.png" alt="Ilustración de servidores">
     </div>
   </main>
+
+  <script>
+    function mostrarInfo() {
+      const info = document.getElementById('infoRedes');
+      if (info.style.display === 'none' || info.style.display === '') {
+        info.style.display = 'block';
+      } else {
+        info.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
